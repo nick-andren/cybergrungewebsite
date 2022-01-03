@@ -1,0 +1,25 @@
+RewriteEngine On
+
+RewriteCond %{QUERY_STRING} ^(.*)&?fbclid=.*$ [NC] 
+RewriteRule ^.*$ https://cybergrunge.net/facebooksucks.php?%{REQUEST_FILENAME} [R,L]
+
+
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.+)$ https://cybergrunge.net/router.php?%{REQUEST_FILENAME} [QSA]
+
+
+ErrorDocument 404 https://cybergrunge.net/index.php
+
+
+<files ~ “^w+.(gif|jpe?g|png|webp|dll|txt|iso|zip|rar|wav|mp3|ogg|midi|php)$”> 
+order deny,allow
+deny from all 
+</files>
+
+
+<Files ~ “^\.htaccess”>
+Order allow,deny
+Deny from all
+</Files>
