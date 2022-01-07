@@ -1,13 +1,15 @@
 # cybergrungewebsite
-just the most basic functions of the website.
+just the most basic functions of the website. this is not the live website, it may differ but only slightly. config is not set up, directory structure may vary. 
+
+i will eventually make a repo for an easy to clone and reuse version of the website, for now this is just to provide a rough outline of how things work.
 
 ## upload handling
 the artists folder contains `custom upload.php` which handles uploads. the process of uploading is kind of shitty, as there are no SQL database entries for individual tracks, or for artists, just for albums. tracks are simply titled the name of the file. currently, a file called userdata.txt is created upon upload that stores data about who uploaded the album. if they are not logged in, it stores nothing. this could be done better with SQL but i havent done it yet. some people might have a problem with this because it technically means any logged in person can edit any album or upload under any artist name and so on. but i havent gotten that far
 
-albums have various style options stored in SQL database. also, i am pretty sure that i use very inconsistent form sanitization methods which leads to a lot of fuckups with uploads that have any kind of special characters in the name :/ 
+albums have various style options stored in SQL database. also, i am pretty sure that i use very inconsistent form sanitization methods which leads to a lot of fuckups with uploads that have any kind of special characters in the name, that is work in progress along w everything else
 
 ## router.php
-as of now, global rewrite rule  leads to router. it handles dynamically generating album pages (including album editing features) and some other stuff,
+as of now, global rewrite rule leads to router. it handles dynamically generating album pages (including album editing features) and some other stuff,
 handles redirects to certain pages. 
 
 ## indexAR.php
