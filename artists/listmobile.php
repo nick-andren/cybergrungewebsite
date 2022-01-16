@@ -10,7 +10,7 @@
 <script>function reloadIndex(){location.reload();} </script>
 	
 <br>
-<a class="btn" href="https://cybergrunge.net/Artists/listmobile.php"><b>click to randomize</a></b> 
+<a class="btn" href="/Artists/listmobile.php"><b>click to randomize</a></b>
 <br>
 <br>
 	<font style="font-size:1em;color:#0F0;background-color:#444">Loading random albums...</font>

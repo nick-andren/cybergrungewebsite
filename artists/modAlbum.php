@@ -10,12 +10,12 @@ $albumname = $result[2];
 
 $currentuserdata = "<font style='background-color:".$_SESSION["bgcolor"].";color:".$_SESSION["textcolor"].";' size=2>".$_SESSION["username"]."</font>";
 
-$USERDATA = fgets(fopen("https://cybergrunge.net/Artists/" . $artistname .'/'. $albumname . "/userdata.txt", "r"));
+$USERDATA = fgets(fopen("/Artists/" . $artistname .'/'. $albumname . "/userdata.txt", "r"));
 if($currentuserdata==$USERDATA) { echo "<a href='editalbum.php'>Hello. You are the User that uploaded this album. You can Edit the album by Click this link.</a>"; };
 
 
 //read contents until the end, grab art and mp3s
-if ($dir = opendir("https://cybergrunge.net/Artists/" . $artistname .'/'. $albumname )) {
+if ($dir = opendir("/Artists/" . $artistname .'/'. $albumname )) {
 while (false !== ($artist = readdir($dir))) {
 if ($artist != "." && $artist != "..") {
 $art = glob("*.JPG"); 
@@ -45,7 +45,7 @@ function pausetrack1(tracknum) {track1.src = String(tracknum); track1.pause(); }
 
 <input type='button' value='Back' onclick='window.history.back()' style='font:15px;font-weight:bold;background-color:#aaa;height:30px;'/> . . 
 <font size=2>this album's URL: <br>
-<input style='width:350px;font-size:15;background-color:#444;color:#0F0;padding:0px;' type='text' value='https://cybergrunge.net/Artists/" . $artistname .'/'. $albumname ."/track_list'/><br>Click title to download a track<br> uploaded by: ".$USERDATA."</font>
+<input style='width:350px;font-size:15;background-color:#444;color:#0F0;padding:0px;' type='text' value='/Artists/" . $artistname .'/'. $albumname ."/track_list'/><br>Click title to download a track<br> uploaded by: ".$USERDATA."</font>
 <br>
 <img height='400px' src='".$art[0]."'><br></div>
 <div style='display:inline-block;float:left;border:9px #AAA inset;padding:10px;overflow:scroll-x;width:600px;'>

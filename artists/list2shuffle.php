@@ -16,11 +16,11 @@
 	
 <br>
 
-<div class="tooltip"><a class="btn" href="https://cybergrunge.net/Artists/list2shuffle.php"><b>RANDOM</a></b><span class="tooltiptext"> In early Athenian democracy, "Sortition", or random selection, also called "Stochacracy", was seen as the fairest way to distribute power in a true Democratic society of equals. In many religions, random selection - or Lot - is viewed as an incredibly powerful force which <u>serves as a connection to the Divine</u> ie. divination. You can observe in modern times how the inherent power of Randomness is now controlled by governments: Lotteries and Raffles are heavily regulated in most States and you must pay a tax for conducting them. Political philosopher John Rawls proposed the "veil of ignorance" a form of Sortition, and theorized that this would lead to social structures based on <u>solidarity</u> where it is less likely for anyone to fall in to extreme neglect or disadvantage. C.G.R.U. and cybergrunge.net advocate for Hybrid Stochocracies where Sortition is used heavily alongside other tools of equalizing opportunity. It is further our beliefe that tyrants and the ruling class, and the types of Sick and depraved societies their propaganda inculcates, despise Randomness, Divination, Sortition, because of its inherently liberatory potential.</span></div>
-<a class="btn" href="https://cybergrunge.net/Artists/list2.php"><b>RECENT</a></b> 
-<a class="btn" href="listAll.php" ><b>LIST ALL</a></b> 
-<a class="btn" target="_blank" href="https://cybergrunge.net/Artists/custom%20upload.php"><b>UPLOAD</a></b> 
-<a class="btn" href="https://cybergrunge.net/login%20stuff/login.php"><b>LOGIN</a></b> <br> <br>
+<div class="tooltip"><a class="btn" href="/Artists/list2shuffle.php"><b>RANDOM</a></b><span class="tooltiptext"> In early Athenian democracy, "Sortition", or random selection, also called "Stochacracy", was seen as the fairest way to distribute power in a true Democratic society of equals. In many religions, random selection - or Lot - is viewed as an incredibly powerful force which <u>serves as a connection to the Divine</u> ie. divination. You can observe in modern times how the inherent power of Randomness is now controlled by governments: Lotteries and Raffles are heavily regulated in most States and you must pay a tax for conducting them. Political philosopher John Rawls proposed the "veil of ignorance" a form of Sortition, and theorized that this would lead to social structures based on <u>solidarity</u> where it is less likely for anyone to fall in to extreme neglect or disadvantage. C.G.R.U. and cybergrunge.net advocate for Hybrid Stochocracies where Sortition is used heavily alongside other tools of equalizing opportunity. It is further our beliefe that tyrants and the ruling class, and the types of Sick and depraved societies their propaganda inculcates, despise Randomness, Divination, Sortition, because of its inherently liberatory potential.</span></div>
+<a class="btn" href="/Artists/list2.php"><b>RECENT</a></b>
+<a class="btn" href="listAll.php" ><b>LIST ALL</a></b>
+<a class="btn" target="_blank" href="/Artists/custom%20upload.php"><b>UPLOAD</a></b>
+<a class="btn" href="/login%20stuff/login.php"><b>LOGIN</a></b> <br> <br>
 	<font size=2 style="color:#0F0;background-color:#444">Loading random albums...</font>
 
 

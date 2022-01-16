@@ -50,7 +50,7 @@ $time = $_SERVER['REQUEST_TIME'];
 <html>
 <style>
 @font-face {  font-family: alias;
-  src: url("https://cybergrunge.net/alias.woff");
+  src: url("/alias.woff");
 }
 .aliasClass {  font-family: alias; color:#0F0; background-color:black;
 }
@@ -61,7 +61,7 @@ $time = $_SERVER['REQUEST_TIME'];
 
 <script>
 window.onbeforeunload = function(){
-xmlhttp.open("POST", "/login stuff/offline.php", true);
+xmlhttp.open("POST", "/login+stuff/offline.php", true);
 xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 xmlhttp.send("username=<? echo $_SESSION['username']; ?>");}
 </script>
@@ -74,15 +74,13 @@ xmlhttp.send("username=<? echo $_SESSION['username']; ?>");}
 <div style="position:absolute;left:100px;top:50px;background-color:#444;padding:25px;border-radius:10%;border:1px solid #0FF">
 <font size=5><span  class="aliasClass">Logged in as: </span><?php echo $userinfo ?><br><br>
 <b><span  class="aliasClass">
-<a  class="aliasClass"href="https://cybergrunge.net/index">home<br></a>
-<a class="aliasClass" href="https://cybergrunge.net/Artists/custom%20upload.php">Upload Music<br>
-<a class="aliasClass" href="https://cybergrunge.net/Artists/list2.php">Browse Music<br>
-<a  class="aliasClass"href="https://cybergrunge.net/chat">Chatroom<br></a>
+<a  class="aliasClass"href="/index">home<br></a>
+<a class="aliasClass" href="/Artists/custom%20upload.php">Upload Music<br>
+<a class="aliasClass" href="/Artists/list2.php">Browse Music<br>
+<a  class="aliasClass"href="/chat">Chatroom<br></a>
 	<br><span class="aliasClass"><b><font color=#0FF>Account tools:</b><br>
-<a  class="aliasClass" href="https://cybergrunge.net/login stuff/password_reset.php"><font color=#0FF>Reset password<br>
-<a class="aliasClass" href="https://cybergrunge.net/login stuff/colorpicker.php"><font color=#0FF>Change user Colors<br>
+<a  class="aliasClass" href="/login+stuff/password_reset.php"><font color=#0FF>Reset password<br>
+<a class="aliasClass" href="/login+stuff/colorpicker.php"><font color=#0FF>Change user Colors<br>
 
-<a  class="aliasClass" href="https://cybergrunge.net/login stuff/logout"><font color=#0FF>log out<br></a></font>
+<a  class="aliasClass" href="/login+stuff/logout"><font color=#0FF>log out<br></a></font>
 </span></span></font>
-<?php 
-?>

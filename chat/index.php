@@ -1,6 +1,6 @@
 <?php
 session_start();
-function loginForm(){header("http://cybergrunge.net/login stuff/login.php");}
+function loginForm(){header("/login+stuff/login.php");}
 
 
 echo $_SESSION['username'];
@@ -11,12 +11,12 @@ $MyUsername = "<a style='background-color:" . $_SESSION["bgcolor"] . ";color:" .
 <font size=2>&nbsp;" . $_SESSION["username"] . "&nbsp;</font> </a>";
 
 if(isset($_SESSION['username'])){ echo '
-<style> @font-face {  font-family: alias; src: url("http://cybergrunge.net/alias.woff");} .aliasClass {  font-family: alias; color:#0F0; background-color:black;}</style>
+<style> @font-face {  font-family: alias; src: url("/alias.woff");} .aliasClass {  font-family: alias; color:#0F0; background-color:black;}</style>
 
 <div style="z-index:99999999;position:fixed;left:0px;top:0px;background-color:#444;padding:2px;border-radius:10%;border:1px solid #0FF;line-height:1.7">
 <font size=2><span  class="aliasClass" ">Logged in as: </span> <br>'.$MyUsername.'<br>
-<a class="aliasClass" href="http://cybergrunge.net/login stuff/welcome">user tasks<br></a>
-<a class="aliasClass" href="http://cybergrunge.net/login stuff/logout">log out<br></a> </span></span></font></div>';}
+<a class="aliasClass" href="/login+stuff/welcome">user tasks<br></a>
+<a class="aliasClass" href="/login+stuff/logout">log out<br></a> </span></span></font></div>';}
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -32,7 +32,7 @@ overflow-y: scroll; overflow-x: hidden;} #usermsg { width: 295px; border: 1px so
 
 <?php
 // IF THE SESSION DOES NOT EXIST MAKE GUEST LOG IN
-    if (!isset($_SESSION['username'])) {loginForm(); $hidethings = '<a href="http://cybergrunge.net/login stuff/login.php">Please Log In</a>';
+    if (!isset($_SESSION['username'])) {loginForm(); $hidethings = '<a href="/login+stuff/login.php">Please Log In</a>';
     $onlineusershtml = fopen("onlineusers.html", "w");
     $chattingAs = " ";
 }
@@ -223,7 +223,7 @@ $(document).ready(function(){
         var username = $("#userid").val();
         $.post("post.php", {text: clientmsg, name:username});             
         $("#usermsg").attr("value", ""); loadLog;
-window.location = 'http://cybergrunge.net/login stuff/logout.php';
+window.location = '/login+stuff/logout.php';
 
 }		
 	});
@@ -236,6 +236,6 @@ window.location = 'http://cybergrunge.net/login stuff/logout.php';
 <input style="visibility:hidden" value="<?php echo $_SESSION['bgcolor']; ?>" name="usercolor" type="text" id="usercolor" size="0" />
 <input style="visibility:hidden" value="<?php echo $_SESSION['textcolor']; ?>" name="user1color" type="text" id="user1color" size="0"  />
 </div></div></div></div></div></div>
-<a href="http://cybergrunge.net/uploader/new56/customU/custom%20upload.php">upload music</a>
+<a href="/uploader/new56/customU/custom%20upload.php">upload music</a>
 </body>
 </html>

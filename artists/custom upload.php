@@ -16,7 +16,7 @@
 
 // user toolbar
 	$MyUsername = "<a style='background-color:" . $s_bgcolor . ";color:" . $s_txcolor . "'><font size=2>&nbsp;" . $s_usrname . "&nbsp;</font> </a>";
-	if(isset($_SESSION['username'])){ echo '<div style="z-index:99999999;position:fixed;left:5px;bottom:5px;background-color:#444;padding:7	px;border-radius:10%;border:5px inset;line-height:1.7"><font size=3><span  class="aliasClass" ">Logged in as: </span> '.$MyUsername.'<br> <a class="aliasClass" href="../login stuff/welcome.php">user tasks</a> - <a class="aliasClass" href="../login stuff/logout.php">log out<br></a> </span></span></font></div>';}
+	if(isset($_SESSION['username'])){ echo '<div style="z-index:99999999;position:fixed;left:5px;bottom:5px;background-color:#444;padding:7	px;border-radius:10%;border:5px inset;line-height:1.7"><font size=3><span  class="aliasClass" ">Logged in as: </span> '.$MyUsername.'<br> <a class="aliasClass" href="../login+stuff/welcome.php">user tasks</a> - <a class="aliasClass" href="../login+stuff/logout.php">log out<br></a> </span></span></font></div>';}
 ?>
 
 <html>
@@ -31,7 +31,7 @@
 	.window{position:absolute;background-color:#00F;color:white;width:350px;height:300px;border:2px white outset;overflow:hidden}
 	.inside{position:relative;height:100%;background-color:#CCC;color:#111;padding:10px;bottom:0px;right:0px;overflow:scroll-y}
     	.divResize { z-index:21;border:outset 5px black;background-color:#aaa;position:absolute;}
- 	 @font-face { font-family: Alias; src:url('http://cybergrunge.net/Alias.woff') format('woff');} 
+    @font-face { font-family: Alias; src:url('/Alias.woff') format('woff');}
 	p1 {font-family: Alias, monospace;} 
 	input {border:2px black ridge;}
 	.aliasClass {  font-family: alias; color:#0f0; background-color:black;}
@@ -41,11 +41,11 @@
 <body style="background-color:#996; font-family:monospace;overflow:hidden;cursor:crosshair">
 
 <div class="main">
-<form action="custom upload.php" method="post" enctype="multipart/form-data"><b>
+<form action="custom+upload.php" method="post" enctype="multipart/form-data"><b>
 	<?php 
 //if user is logged in let them know otherwise prompt to register or sign in
 	if(isset($_SESSION['username'])) {echo  '<font style="color:black;background-color:#aaa">You are logged in as '.$MyUsername;} 
-	else{ echo '<span style="background-color:black;color:#00f;font-family: "PT Mono", monospace;"><font style="background-color:#0FF;color:black;"><font size=2><b>Not logged in. <a href="../login%20stuff/login.php">log in</a> or <a href="../login stuff/register.php">Register</a>For An Account if you want.</font></span></b>';} 
+	else{ echo '<span style="background-color:black;color:#00f;font-family: "PT Mono", monospace;"><font style="background-color:#0FF;color:black;"><font size=2><b>Not logged in. <a href="../login%20stuff/login.php">log in</a> or <a href="../login+stuff/register.php">Register</a>For An Account if you want.</font></span></b>';}
 	?>
 <br></font></font><font size=2><br><font style="color:black;">
 Audio file (mp3,wav): 
