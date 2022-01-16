@@ -3,6 +3,15 @@ just the most basic functions of the website. this is not the live website, it m
 
 i will eventually make a repo for an easy to clone and reuse version of the website, for now this is just to provide a rough outline of how things work.
 
+## Getting Started
+To run this locally, navigate to the project's base directory and run the following:
+
+```
+$ php -S localhost:1337
+```
+
+Now you can visit the local version of the site by visiting http://localhost:1337/indexAR.php
+
 ## upload handling
 the artists folder contains `custom upload.php` which handles uploads. the process of uploading is kind of shitty, as there are no SQL database entries for individual tracks, or for artists, just for albums. tracks are simply titled the name of the file. currently, a file called userdata.txt is created upon upload that stores data about who uploaded the album. if they are not logged in, it stores nothing. this could be done better with SQL but i havent done it yet. some people might have a problem with this because it technically means any logged in person can edit any album or upload under any artist name and so on. but i havent gotten that far
 
