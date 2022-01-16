@@ -4,7 +4,7 @@ session_start();
 	$file = fopen("userdata.txt", "r"); $getgot = fgets($file);
 	list($width, $color1, $color2, $color3, $color4, $borderstyle1) = sscanf(strval($getgot), "%s %s %s %s %s %s");
 		if(true!=isset($_SESSION['username'])) { echo "you can not edit this page because you are not logged in.
-		please <a href='http://cybergrunge.net/login%20stuff/login.php'>Log in</a> to edit the page.";};
+		please <a href='/login%20stuff/login.php'>Log in</a> to edit the page.";};
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
      $width = $_POST['width'];

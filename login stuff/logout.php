@@ -10,7 +10,7 @@ require_once "config.php";
                 if(mysqli_stmt_execute($stmt)){ echo "ok u are offline";
 $_SESSION = array(); 
 session_destroy(); 
-header("location:http://cybergrunge.net");
+header("location:/");
 exit;
 }}
 mysqli_stmt_close($stmt); 

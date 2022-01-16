@@ -8,15 +8,15 @@ require_once "config.php";
             $param1_status = "offline";
             $param1_id = $_SESSION['id'];
                 if(mysqli_stmt_execute($stmt)){
-header("location:http://cybergrunge.net");
+header("location:/");
 $_SESSION = array(); 
-header("location:http://cybergrunge.net");
+header("location:/");
 session_destroy(); 
-header("location:http://cybergrunge.net");
+header("location:/");
 exit;
-header("location:http://cybergrunge.net");
+header("location:/");
 }}
-header("location:http://cybergrunge.net");
+header("location:/");
 mysqli_stmt_close($stmt); 
-header("location:http://cybergrunge.net");
+header("location:/");
 ?>

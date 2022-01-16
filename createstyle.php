@@ -27,7 +27,7 @@ mysqli_stmt_bind_param($stmt, "sssssssssssssss", $newtablename, $p_bodybackgroun
             if(mysqli_stmt_execute($stmt)){echo "okay everything went correctly.... i think....???<br>
 your database entry was entered with VALUES ('".strip_tags($_POST["bodybackground"])."', '".strip_tags($_POST["background1"])."', '".strip_tags($_POST["bordercolor1"])."', '".strip_tags($_POST["borderstyle1"])."', '".strip_tags($_POST["borderwidth1"])."', '".strip_tags($_POST["borderwidth2"])."', '".strip_tags($_POST["borderstyle2"])."', '".strip_tags($_POST["bordercolor2"])."', '".strip_tags($_POST["background2"])."', '".strip_tags($_POST["color1"])."', '".strip_tags($_POST["color2"])."', '".strip_tags($_POST["artistblurb"])."', '".strip_tags($_POST["albumblurb"])."', '".strip_tags($_POST["owner"])."', '".strip_tags($_POST["page"])."') ";
 
-echo "<br><br>You should now be able to go <a href='https://cybergrunge.net/Artists/".$_POST['page']."/editalbum'>BACK</a> and edit your style.";
+echo "<br><br>You should now be able to go <a href='/Artists/".$_POST['page']."/editalbum'>BACK</a> and edit your style.";
 
 } 
 				else{echo "Something went wrongwith the sql bullshit. Please try again later.";}

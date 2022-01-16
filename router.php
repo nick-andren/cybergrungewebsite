@@ -27,11 +27,11 @@ if($link === false){
 }
 
 
-if($_SERVER['REQUEST_URI']=="/router.php?/kunden/homepages/36/d821092245/htdocs/Default.htm"){header("Location:https://cybergrunge.net/indexAR.php");die();}
-if($_SERVER['REQUEST_URI']=="/router.php?/kunden/homepages/36/d821092245/htdocs/phpmyadmin/Default.htm"){header("Location:https://cybergrunge.net/phpmyadmin/index.php");die();}
-if($_SERVER['REQUEST_URI']=="/router.php?/kunden/homepages/36/d821092245/htdocs/chat/Default.htm"){header("Location:https://cybergrunge.net/chat/index.php");die();}
-if($_SERVER['REQUEST_URI']=="/router.php?/kunden/homepages/36/d821092245/htdocs/seeleofficial/Default.htm"){header("Location:https://cybergrunge.net/seeleofficial/index.php");die();}
-if($_SERVER['REQUEST_URI']=="/router.php?/kunden/homepages/36/d821092245/htdocs/resources/automaticcollage/Default.htm"){header("Location:https://cybergrunge.net/index.php");die();}
+if($_SERVER['REQUEST_URI']=="/router.php?/kunden/homepages/36/d821092245/htdocs/Default.htm"){header("Location:/indexAR.php");die();}
+if($_SERVER['REQUEST_URI']=="/router.php?/kunden/homepages/36/d821092245/htdocs/phpmyadmin/Default.htm"){header("Location:/phpmyadmin/index.php");die();}
+if($_SERVER['REQUEST_URI']=="/router.php?/kunden/homepages/36/d821092245/htdocs/chat/Default.htm"){header("Location:/chat/index.php");die();}
+if($_SERVER['REQUEST_URI']=="/router.php?/kunden/homepages/36/d821092245/htdocs/seeleofficial/Default.htm"){header("Location:/seeleofficial/index.php");die();}
+if($_SERVER['REQUEST_URI']=="/router.php?/kunden/homepages/36/d821092245/htdocs/resources/automaticcollage/Default.htm"){header("Location:/index.php");die();}
 
 		$thisuri = $_SERVER['REQUEST_URI'];
 		$result1 = str_replace('/kunden/homepages/36/d821092245/htdocs/', '', $thisuri); 
@@ -42,7 +42,7 @@ if($_SERVER['REQUEST_URI']=="/router.php?/kunden/homepages/36/d821092245/htdocs/
 		$artistname = $result4[0]; $albumname = $result4[1]; 
 
 		$dirtoread = "Artists/" . urldecode($artistname) .'/'. urldecode($albumname);
-if(!is_dir($dirtoread)){header("Location:https://cybergrunge.net/index.php");die();};
+if(!is_dir($dirtoread)){header("Location:/index.php");die();};
 
 echo '<html><style>#tasktodo{background-color:#000;color:#F0F;border:1px solid #F0F;} #text{background-color:#000;color:#F0F;border:1px solid #F0F;}</style>
 <link href="https://fonts.googleapis.com/css?family=PT+Mono&display=swap" rel="stylesheet">
@@ -56,8 +56,8 @@ $MyUsername = "<a style='background-color:" . $_SESSION["bgcolor"] . ";color:" .
 
 
 if(isset($_SESSION['username'])){
-echo '<style> @font-face {  font-family: alias; src: url("http://cybergrunge.net/alias.woff");} .aliasClass {  font-family: alias; color:#0f0; background-color:black;}</style>
-<div style="z-index:99999999;position:absolute;right:5px;bottom:0px;background-color:#444;padding:7	px;border-radius:10%;border:5px inset;line-height:1.7"><font size=3><span  class="aliasClass" ">Logged in as: </span> '.$MyUsername.'<br> <a class="aliasClass" href="http://cybergrunge.net/login stuff/welcome.php">user tasks</a> - <a class="aliasClass" href="http://cybergrunge.net/login stuff/logout.php">log out<br></> </span></span></font></div>';}
+echo '<style> @font-face {  font-family: alias; src: url("/alias.woff");} .aliasClass {  font-family: alias; color:#0f0; background-color:black;}</style>
+<div style="z-index:99999999;position:absolute;right:5px;bottom:0px;background-color:#444;padding:7	px;border-radius:10%;border:5px inset;line-height:1.7"><font size=3><span  class="aliasClass" ">Logged in as: </span> '.$MyUsername.'<br> <a class="aliasClass" href="/login+stuff/welcome.php">user tasks</a> - <a class="aliasClass" href="/login+stuff/logout.php">log out<br></> </span></span></font></div>';}
 
 
 
@@ -149,10 +149,10 @@ $art = glob($dirtoread."/*.JPG"); if($art==NULL) {$art = glob($dirtoread."/*.png
 	
 	<body style='line-height:1;background-color:".$zbodybackground	.";color:white;'>
 	<div style='display:inline-block;color:".$zcolor1.";float:left;border:".$zborderwidth1."px ".$zborderstyle1." ".$zbordercolor1.";padding:10px;line-height:1;background:".$zbackground1."'>
-<button style='font:15px;font-weight:bold;background-color:#aaa;height:30px;'><a href='https://cybergrunge.net/Artists/list2shuffle.php' style='color:black;background:none;'>Back</a></button> 
+<button style='font:15px;font-weight:bold;background-color:#aaa;height:30px;'><a href='/Artists/list2shuffle.php' style='color:black;background:none;'>Back</a></button>
 	<br>
 	<font style='color:".$zcolor1."' size=2>this album's permanent URL: <br>
-	<input style='width:350px;font-size:15;background-color:#111;color:#0F0;padding:0px;' readonly type='text' value='https://cybergrunge.net/Artists/" . 
+	<input style='width:350px;font-size:15;background-color:#111;color:#0F0;padding:0px;' readonly type='text' value='/Artists/" .
 	$artistname .'/'. $albumname ."'/><br>
 	</font><br>
 	<img height='300px' width='300px'  src='".$art[0]."'><br>".$zartistblurb."</div>
@@ -184,9 +184,9 @@ Task: <select name='tasktodo' id='tasktodo'><option value='0'>Do Nothing</option
 NEW FEATURE (experimental use at your own risk): style editor
 <br>";
 
-if($zpage=='') {echo "<form method='post' action='https://cybergrunge.net/createstyle.php'>
+if($zpage=='') {echo "<form method='post' action='/createstyle.php'>
 <input type='submit' style='border:2px solid black;' value='click here' >click here</input> to create a database entry for custom page style. ONLY DO THIS ONCE.<br><br> then return back to this page to edit the style.<input type='hidden' name='page' value='".$artistname ."/". $albumname ."'><input type='hidden' name='owner' value='".$_SESSION['username']."'></form>";}
-else{echo "otherwise go below to edit existing style: <form method='post' action='https://cybergrunge.net/coloreditor.php'><input type='submit' value='STYLE EDITOR' style='border:3px black inset;background-color:#222;color:pink'></input>
+else{echo "otherwise go below to edit existing style: <form method='post' action='/coloreditor.php'><input type='submit' value='STYLE EDITOR' style='border:3px black inset;background-color:#222;color:pink'></input>
 <input type='hidden' name='page' value='".$artistname ."/". $albumname ."'></form></div>";} 
 
 
@@ -196,4 +196,4 @@ else{echo "otherwise go below to edit existing style: <form method='post' action
 } closedir($dir); fclose("userdata.txt", "r");}
 }
 
-else{header("Location:https://cybergrunge.net/index.php");die();};
+else{header("Location:/index.php");die();};

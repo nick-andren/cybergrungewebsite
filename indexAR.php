@@ -4,7 +4,7 @@ session_start(); include "config2.php";
 <html>
 	<script src="mobilecheck.js"></script>
     <?php session_start(); //user panel
-	$MyUsername = "<a style='background-color:" . $_SESSION["bgcolor"] . ";color:" . $_SESSION["textcolor"] . "'><font size=2>&nbsp;" . $_SESSION["username"] . "&nbsp;</font> </a>"; if(isset($_SESSION['username'])){ echo '<style> @font-face {  font-family: alias; src: url("https://cybergrunge.net/alias.woff");} .aliasClass {  font-family: alias; color:#0f0; background-color:black;}</style><div style="z-index:99999999;position:fixed;right:5px;bottom:5px;background-color:#444;padding:7	px;border-radius:10%;border:5px inset;line-height:1.7"><font size=3><span  class="aliasClass" ">Logged in as: </span> '.$MyUsername.'<br> <a class="aliasClass" href="https://cybergrunge.net/login stuff/welcome.php">user tasks</a> - <a class="aliasClass" href="https://cybergrunge.net/login stuff/logout.php">log out<br></a> </span></span></font></div>';} ?>	
+	$MyUsername = "<a style='background-color:" . $_SESSION["bgcolor"] . ";color:" . $_SESSION["textcolor"] . "'><font size=2>&nbsp;" . $_SESSION["username"] . "&nbsp;</font> </a>"; if(isset($_SESSION['username'])){ echo '<style> @font-face {  font-family: alias; src: url("/alias.woff");} .aliasClass {  font-family: alias; color:#0f0; background-color:black;}</style><div style="z-index:99999999;position:fixed;right:5px;bottom:5px;background-color:#444;padding:7	px;border-radius:10%;border:5px inset;line-height:1.7"><font size=3><span  class="aliasClass" ">Logged in as: </span> '.$MyUsername.'<br> <a class="aliasClass" href="/login+stuff/welcome.php">user tasks</a> - <a class="aliasClass" href="/login+stuff/logout.php">log out<br></a> </span></span></font></div>';} ?>
 <head><title>~Productivity Suite by Cybergrunge.net~</title>
 
 <script src="https://cdn.jsdelivr.net/gh/NovaSagittarii/misc@1.0.2/p5.min.js"></script>
@@ -27,7 +27,7 @@ session_start(); include "config2.php";
 	.window{position:absolute;background-color:#00F;color:white;width:350px;height:300px;border:2px white outset;overflow:hidden}
 	.inside{position:relative;height:100%;background-color:#CCC;color:#111;padding:10px;bottom:0px;right:0px;overflow:scroll-y}
     .divResize { z-index:21;border:outset 5px black;background-color:#aaa;position:absolute;}
- 	 @font-face { font-family: Alias; src:url('http://cybergrunge.net/Alias.woff') format('woff');} 
+    @font-face { font-family: Alias; src:url('/Alias.woff') format('woff');}
 	p1 {font-family: Alias, monospace;} 
 	input {border:2px black ridge;}
 	iframe{border:none}
@@ -45,14 +45,14 @@ session_start(); include "config2.php";
 <br><br>
 <script>// THIS IS THE SCRIPT FOR BACKGROUND FOR BACKGROUND FOR BACKGROUND FOR BACKGROUND FOR BACKGROUND FOR BACKGROUND FOR BACKGROUND FOR BACKGROUND
 number = Math.floor(Math.random()*26);
-if(number<23){document.getElementById('main').style.backgroundImage = 'url(https://cybergrunge.net/backgrounds/bg' + number + '.jpg)';}
+if(number<23){document.getElementById('main').style.backgroundImage = 'url(/backgrounds/bg' + number + '.jpg)';}
 else{
 var $ = function(prop){return document.querySelector(prop);};
 var ang = function(a){return a*(Math.PI/180);}; var playerSpeed = 8; var sensitivityX = 0.25;
     var sensitivityY = 0.15; var mx = 0, my = 0; var keys = []; var cam; var yAng = 0; var floorTexture, wallTexture;
 document.body.addEventListener("mousemove",function(e){ mx = e.movementX; my = e.movementY; });
     var D = {cx:0,cy:0,cz:0,x:0,y:0,z:200,r:0,r2:0,}; function preload(){
-    floorTexture = loadImage("https://cybergrunge.net/tile2.png"); wallTexture = loadImage("https://cybergrunge.net/tile1.png");}
+    floorTexture = loadImage("/tile2.png"); wallTexture = loadImage("/tile1.png");}
 function setup(){ createCanvas(window.innerWidth,window.innerHeight,WEBGL); cam = createCamera(); } 
 function draw(){ background(0); noStroke(); cam.pan(ang(-D.cx)); cam.tilt(ang(D.cy)); D.r-=(mx*sensitivityX); yAng-=(my*sensitivityY);
 cam.setPosition(D.x,-D.y,D.z); push();
@@ -85,14 +85,14 @@ if(yAng < -30){if(my > 0){sensitivityY = 0;}if(my < 0){sensitivityY = 0.15;}} if
 	
 <style>	a:hover{background-color:#aaa;color:black;border:3px outset black;text-decoration:none;}
 		a{background-color:#999;color:black;border:2px inset black;text-decoration:none;}
-    @font-face {font-family: cgfont; src: url('https://cybergrunge.net/standardcg.woff');}
+    @font-face {font-family: cgfont; src: url('/standardcg.woff');}
 	.close{border:2px #BBB outset;background:linear-gradient(to top, gray, #FFF);font-weight:bold;font-size:10;padding:1px;}
 	.close:active{border:2px #BBB inset;background:linear-gradient(to top, gray, gray);font-weight:bold;font-size:10;padding:1px;}
 	.close:hover{border:2px #BBB outset;background:linear-gradient(to top, #CCC, #CCC);font-weight:bold;font-size:10;padding:1px;}
 		
     #divContainer{height:100%;width:100%;left:0x;top:0px}	    
-    @font-face {font-family: Alias; src:url('https://cybergrunge.net/Alias.woff') format('woff');} 		
-    @font-face {font-family: cg; src:url('https://cybergrunge.net/Alias.woff') format('woff');}		
+    @font-face {font-family: Alias; src:url('/Alias.woff') format('woff');}
+    @font-face {font-family: cg; src:url('/Alias.woff') format('woff');}
     p1 {font-family: Alias, monospace;} 		
     .window{visibility:hidden;position:absolute;color:#000;width:350px;height:300px;overflow:hidden}		
     .inside{position:relative;height:100%;background-color:#000;color:#FFF;padding:10px;bottom:0px;right:0px;overflow:scroll-y}		
@@ -112,7 +112,7 @@ height:125px;
 background-color:#aaa;position:absolute;cursor:move;
 left:13px;top:140px;width:340px;overflow:hidden;"><div class="windowname" style="padding:3px;cursor:move;">About
 <div class="exit"><a onclick="minimize(69420,125)" class="close" >[_]</a><a onclick="hide(123b)" class="close" >[x]</a> </div> </div>
-Registered in 2020 by <a href="email:ellie@cybergrunge.net">Elucidated.Voyyd</a>, Cybergrunge.net is a subsidiary of <a style="color:#FFF;background-color:black;" href="https://cgru.net">C.G.R.U.</a>
+Registered in 2020 by <a href="mailto:ellie@cybergrunge.net">Elucidated.Voyyd</a>, Cybergrunge.net is a subsidiary of <a style="color:#FFF;background-color:black;" href="https://cgru.net">C.G.R.U.</a>
 We provide free hosting for artists of Cybernetic Grunge, Multimedia Art and Resources. <br>
 <span style="background-color:#FF0;color:black;"><b>12/26/21 - New Text: 
 <a style="background-color:#FF0;color:black" href="cgruText.html">
@@ -125,8 +125,8 @@ Cyber Grunge: On The Emergence of A New, Unified Anti-Culture</a></b></span>
 <div class="divResize" id="61420" style="border:groove 5px; height:105px; background-color:#aaa;position:absolute;cursor:move;
 left:25px;top:25px;width:375px;overflow:hidden;"><div class="windowname" style="padding:0px;cursor:move;"><b>User Control Panel</b>
 <div class="exit"><a onclick="minimize(61420,105)" class="close" >[_]</a><a onclick="hide(123b)" class="close" >[x]</a> </div> </div>
-<br>;)<? if(!isset($_SESSION['username'])){ echo'<a href="https://cybergrunge.net/login%20stuff/login.php" style="background-color:none;border:none;" ><img  src="https://cybergrunge.net/login.png" width=65px></a>';} ?><a style="background-color:none;border:none;" href="https://cybergrunge.net/Artists/custom upload.php">
-<img  src="https://cybergrunge.net/upload.png" width=65px height=65px></a>
+<br>;)<? if(!isset($_SESSION['username'])){ echo'<a href="/login%20stuff/login.php" style="background-color:none;border:none;" ><img  src="/login.png" width=65px></a>';} ?><a style="background-color:none;border:none;" href="/Artists/custom+upload.php">
+<img  src="/upload.png" width=65px height=65px></a>
 	    <a style="border:none;background-color:none;" onclick="show(4)" href="#"><img height=65px src="gen.png"></a> 
 	    <a style="border:none;background-color:none;" onclick="show(2)" href="#"><img height=65px src="warez.png"></a> 
 	    <a style="border:none;background-color:none;" onclick="show(3)" href="#"><img height=65px src="chat.png"></a> 
@@ -139,7 +139,7 @@ left:25px;top:25px;width:375px;overflow:hidden;"><div class="windowname" style="
 <div class="divResize" id="444" style="visibility:visible;width:250px;height:135px;cursor:move;position:absolute;top:295px;left:30px;overflow:hidden;border:5px groove;background-color:#aaa"><div class="windowname" style="height:20px;width:100%;background:linear-gradient(to right, #00F, #005);padding:1px;color:#FFF;cursor:move;">
 <b>Mp3Player</b>
 <div class="exit"><a onclick="minimize(444,135)" class="close" >[_]</a><a onclick="hide(123b)" class="close" >[x]</a></div></div>
-<iframe src="https://cybergrunge.net/ListAllmp3.php" width="250px" height="150px" style="overflow:hidden;z-index:1111;border:0px;padding:0px;"></iframe></div>
+<iframe src="/ListAllmp3.php" width="250px" height="150px" style="overflow:hidden;z-index:1111;border:0px;padding:0px;"></iframe></div>
 	    
 	   
 
@@ -174,7 +174,7 @@ if(poop.style.height !== "20px"){poop.style.height = "20px";}else{poop.style.hei
 <b>Releases</b>
 <div class="exit"><a onclick="minimize(123,500)" class="close" >[_]</a><a onclick="hide(123b)" class="close" >[x]</a></div></div>
 <div id="123b" style="overflow:scroll;background-color:#aaa;line-height:1.25;width:100%;height:100%;visibility:visible;">
-<script>function showrecent(){document.getElementById("recentframe").src = "https://cybergrunge.net/Artists/list2.php"; document.getElementById("recentframe").style.visibility = "visible"; document.getElementById("randomlistgen").style.visibility = "hidden"; document.getElementById("randomlistgen").style.overflow = "hidden"; document.getElementById("randomlistgen").style.height = "0px"; document.getElementById("recentframe").style.height = "100%"; document.getElementById("recentframe").style.width = "100%";}</script>
+<script>function showrecent(){document.getElementById("recentframe").src = "/Artists/list2.php"; document.getElementById("recentframe").style.visibility = "visible"; document.getElementById("randomlistgen").style.visibility = "hidden"; document.getElementById("randomlistgen").style.overflow = "hidden"; document.getElementById("randomlistgen").style.height = "0px"; document.getElementById("recentframe").style.height = "100%"; document.getElementById("recentframe").style.width = "100%";}</script>
 <span id="randomlistgen"><br><center>
 
 
@@ -263,17 +263,17 @@ Etsy:<br><br><a style="background-color:black;z-index:21;padding:3px;color:#FFF;
     <a href="https://textfiles.com/" target="blank">https://textfiles.com/ </a> <br>An resource for BBS Archives. includes .txt zines,
     vintage Shareware CD Rips, pdfs, audio and artwork from the early internet.<br>
     <br><b><h3>Music Tools</h3></b>
-    <a href="https://cybergrunge.net/resources/2000_Vintage_Tracker_Wavs.rar">2000_Vintage_Tracker_WAVs.rar</a><br>Various instruments ~58mb<br>
-    <a href="https://cybergrunge.net/resources/Vintage_Soundfontz.rar">Vintage_Soundfontz.rar </a> <br>VOL.1 ~100mb<br>
-    <a href="https://cybergrunge.net/resources/VST%20plugins.rar">VST PLUGINS.rar </a> <br>Various freeware compiled by CGRU ~500mb<br>
+    <a href="/resources/2000_Vintage_Tracker_Wavs.rar">2000_Vintage_Tracker_WAVs.rar</a><br>Various instruments ~58mb<br>
+    <a href="/resources/Vintage_Soundfontz.rar">Vintage_Soundfontz.rar </a> <br>VOL.1 ~100mb<br>
+    <a href="/resources/VST%20plugins.rar">VST PLUGINS.rar </a> <br>Various freeware compiled by CGRU ~500mb<br>
     <a href="https://vstmuseum.com" target="blank">https://VSTMUSEUM.com </a> <br>dope website offering VST's<br>
     <a href="https://vst4free.com" target="blank">https://vst4free.com </a> <br>dope website offering VST's<br>
     <br><h3><b>Art Tools</h3></b>
-    <a href="https://cybergrunge.net/resources/Vintage_Digital_images.rar">Vintage images.rar</a> <br>Old raytrace images, recovered vintage ephemera ~117mb<br>
+    <a href="/resources/Vintage_Digital_images.rar">Vintage images.rar</a> <br>Old raytrace images, recovered vintage ephemera ~117mb<br>
     <br><b>TINYPIC archives (by ArchiveTeam)</b><br>curated by cgru.net, these contain about 800 images each of selections from tinypic that were saved before the site shut down. They are used as source material for the cybergrunge.net random art generator.<br>
-    <a href="https://cybergrunge.net/resources/tinypic%20batch%2001.rar">tinypic Archive curated Batch 01.rar</a><br> ~80mb<br>
-    <span style="background-color:yellow">NEW!</span><a href="https://cybergrunge.net/resources/tinypic%20cg6.rar">Curated Batch 02.rar</a><br> ~80mb<br>
-	    <br><br><a href="https://cybergrunge.net/html%20art/tinypic18/listfiles">HERE</a> is a list of all images used for Random Art Generator. you can use a bulk file downloader if you want to download them all.</a><br><br>More resources will be added here when they become available.<br><br>Thank you for visiting! <br><br><br><br></font></div></div>
+    <a href="/resources/tinypic%20batch%2001.rar">tinypic Archive curated Batch 01.rar</a><br> ~80mb<br>
+    <span style="background-color:yellow">NEW!</span><a href="/resources/tinypic%20cg6.rar">Curated Batch 02.rar</a><br> ~80mb<br>
+	    <br><br><a href="/html%20art/tinypic18/listfiles">HERE</a> is a list of all images used for Random Art Generator. you can use a bulk file downloader if you want to download them all.</a><br><br>More resources will be added here when they become available.<br><br>Thank you for visiting! <br><br><br><br></font></div></div>
      
 
 
@@ -285,7 +285,7 @@ Etsy:<br><br><a style="background-color:black;z-index:21;padding:3px;color:#FFF;
 <b>Cybergrunge Chatroom</b>
 			<div class="exit"><button class="close" onclick="hide(3)">X</button>
 			</div></div><script> function showchat(){
-				document.getElementById("chatroom1").src="https://cybergrunge.net/chat/";
+				document.getElementById("chatroom1").src="/chat/";
 				document.getElementById("chatbtn").style.visibility = "hidden";
 				document.getElementById("chatbtn").style.width = "0px";
 				document.getElementById("chatbtn").style.height = "0px";};		</script>
@@ -302,7 +302,7 @@ Etsy:<br><br><a style="background-color:black;z-index:21;padding:3px;color:#FFF;
 		<div class="windowname" style="height:20px;width:100%;background:linear-gradient(to right, #00F, #005);padding:1px;color:#FFF;cursor:move;">
 <b>RANDOM ART GENERATOR</b><div class="exit"><button class="close" onclick="hide(4)">X</button></div></div>
 	    <script>function loadartgen(){
-document.getElementById("artgen").src = "https://cybergrunge.net/html%20art/RandomArt.html";
+document.getElementById("artgen").src = "/html%20art/RandomArt.html";
 document.getElementById("artgenbtn").style.width = "0px";
 document.getElementById("artgenbtn").style.height = "0px";
 document.getElementById("artgenbtn").style.visibility = "hidden";
@@ -326,11 +326,11 @@ I AM DISABLED, TRANSGENDER, WEIRD... <br><a href="https://www.paypal.com/donate/
 <a class="variousas" onclick="showcalc()" style="background-color:#59F;color:white;" >
 Bandcamp Album Calculator</a><br><br>
 
-<a class="variousas" target="blank" href="https://cybergrunge.net/html art/RandomAngularLines.html">
+<a class="variousas" target="blank" href="/html+art/RandomAngularLines.html">
 Sigil Generator</a> 
-<a class="variousas" target="blank" href="https://cybergrunge.net/html art/randomutf.html">
+<a class="variousas" target="blank" href="/html+art/randomutf.html">
 UTF divination</a> 
-<a class="variousas" target="blank" href="https://cybergrunge.net/html art/imgwarp.php">
+<a class="variousas" target="blank" href="/html+art/imgwarp.php">
 image warper</a>
 <br><br>
 <a class="variousas" style="color:#FF0;background-color:#090" target="blank" href="circuits.html">
@@ -340,15 +340,15 @@ Chalk-Dog.com</a> <br><br>
 
 <a class="variousas" target="blank" href="https://perchance.org/randomcollage">
 IMGUR collage</a> 
-<a class="variousas" target="blank" href="https://cybergrunge.net/html art/stretchygifs">
+<a class="variousas" target="blank" href="/html art/stretchygifs">
 Gif collage</a>
 <a class="variousas" style="background-color:#444;color:white;" target="blank" href="https://github.com/cybergrunge-ops">
 Cybergrunge Github</a> 
 <br><br>
 
-<a class="variousas" target="blank" href="https://cybergrunge.net/namesgenerated.html">
+<a class="variousas" target="blank" href="/namesgenerated.html">
 Neural Network Literature</a><br><br>
-<a class="variousas" target="blank" href="https://cybergrunge.net/block-youtube-recommendations.html">
+<a class="variousas" target="blank" href="/block-youtube-recommendations.html">
 Block Youtube Recommendations</a><br><br>
 <a class="variousas" target="blank" href="https://cgru.net/fp2/firstperson.html">
 Surreal 3d Browser Game</a> using blend4webCE <br><br>
@@ -359,7 +359,7 @@ MIRRORS: <a class="variousas" target="blank" href="https://cgru.net/TEMP/editor.
 HTML Editor</a>
 <a class="variousas" target="blank" href="gibgen/gibgen.htm">
 Gibberish Generator</a><br><br>
-<a class="variousas" style="background-color:#59F;color:white;" target="blank" href="https://cybergrunge.net/bandcampN2.php">(WIP) Mockup for better bandcamp layout</a> <br>
+<a class="variousas" style="background-color:#59F;color:white;" target="blank" href="/bandcampN2.php">(WIP) Mockup for better bandcamp layout</a> <br>
 using cURL (enter any bandcamp url!)
 <br><br>
 
@@ -368,9 +368,9 @@ using cURL (enter any bandcamp url!)
 
 
 
-<a style="color:#0F0" href="https://cybergrunge.net/html%20art/App.html"><img height=85px src="paint.png"></a> <br>
+<a style="color:#0F0" href="/html%20art/App.html"><img height=85px src="paint.png"></a> <br>
 <span style="background-color:#0FF"><b><button onclick="show(69)">Terms of service</button></b></span>
-    <a href="https://cybergrunge.net/resources/vst/vst.html" height="300px"><img src="vst.jpg"></a> 
+    <a href="/resources/vst/vst.html" height="300px"><img src="vst.jpg"></a>
 	</font>
 </div></div>
 
@@ -383,7 +383,7 @@ style="border:groove 5px;background-color:#aaa;z-index:2;position:fixed;cursor:m
 <script>
 function hidecalc(){document.getElementById("bandcalc").style.visibility = "hidden";}
 function showcalc(){document.getElementById("bandcalc").style.visibility = "visible";
-document.getElementById("bandcalcframe").src = "https://cybergrunge.net/bandcalc.php" ;}</script>
+document.getElementById("bandcalcframe").src = "/bandcalc.php" ;}</script>
 </div>
 
 
@@ -412,7 +412,7 @@ document.getElementById("bandcalcframe").src = "https://cybergrunge.net/bandcalc
     <a href="https://antixlinux.com/" target="_blank">
     <img width="90px" src="antix.png"></a>
     <br>
-    <a href="https://cybergrunge.net/opensource.html" target="_blank"><img width="100px" src="kopimi.jpeg"></a>
+    <a href="/opensource.html" target="_blank"><img width="100px" src="kopimi.jpeg"></a>
     <br>
     <img width="90px" src="Graphic002.jpg">
     <br>
@@ -834,7 +834,7 @@ document.getElementById("divcontainer").appendChild(div)
 
 
 <style>.scrolink{border:0px black solid;margin:0px;color:#2FF;background-color:#333;}</style>
-<div style="z-index:100;background-color: #F0F;position:absolute;width:100%;left:0;top:0;padding:0px;height:25px;"><span style="display:inline-block;width:200px"><a onMouseOver="this.style.backgroundColor='#0F0';this.style.color='';" onMouseOut="this.style.backgroundColor='';this.style.color='';" href="https://cybergrunge.net/indexAR2.php">classic interface</a></span></div><div style="z-index:101;position:absolute;top:0px; left:200px;display:inline-block;height:20px;overflow:hidden;width:80%;border:2px inset black;background-color:#000;color:#0F3;font-weight:bold;">
+<div style="z-index:100;background-color: #F0F;position:absolute;width:100%;left:0;top:0;padding:0px;height:25px;"><span style="display:inline-block;width:200px"><a onMouseOver="this.style.backgroundColor='#0F0';this.style.color='';" onMouseOut="this.style.backgroundColor='';this.style.color='';" href="/indexAR2.php">classic interface</a></span></div><div style="z-index:101;position:absolute;top:0px; left:200px;display:inline-block;height:20px;overflow:hidden;width:80%;border:2px inset black;background-color:#000;color:#0F3;font-weight:bold;">
 <marquee>
 Do you or someone you know need help? <a class="scrolink" href="https://duckduckgo.com/?t=lm&q=community+action+agency+near+me&ia=places" target="blank">Find your local Community Action Agency</a> for support and resources. . . . . . . . . 
 NEWS: Cybergrunge.net has recieved its 154th upload ! . . . . 
