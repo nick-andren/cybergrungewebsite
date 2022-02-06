@@ -94,7 +94,7 @@ Audio file (mp3,wav):
 	if(isset($_POST["albumname"]) == true){
 		echo '<input type="hidden" name="exists" id="exists" value="true"></input>';
 		echo "you are adding tracks to the album <br> ".strip_tags($_POST["albumname"])." by ". strip_tags($_POST["artistname"]);
-		echo '<br><br><a href="https://cybergrunge.net/Artists/custom_upload.php">Click Here</a> to upload a new album.<br><br>';
+		echo '<br><br><a href="../artists/custom_upload.php">Click Here</a> to upload a new album.<br><br>';
 		echo '<input name="artistname" id="artistname" type="hidden" value="' . strip_tags($_POST['artistname']) . '"></input>';
 		echo '<input name="albumname" id="albumname" type="hidden" value="' . strip_tags($_POST['albumname']) . '"></input><br>';
 		echo '
