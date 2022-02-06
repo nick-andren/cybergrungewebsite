@@ -288,7 +288,7 @@ $newpagehead = ""; $artistexists = "";
 
 
 // if upload went fine, make iframe. the iframe does not refer to a file, just a URI handled by router.php which generates editalbum application
-	if(isset($_POST["artistname"])){ echo "<div style='position:absolute;left:420;top:20;'><br><iframe style='width:700;height:550;' src='../Artists/" . htmlspecialchars($_POST["artistname"]) . "/" . htmlspecialchars($_POST["albumname"]) . "/editalbum'></iframe></div>";}
+	if(isset($_POST["artistname"])){ echo "<div style='position:absolute;left:420;top:20;'><br><iframe style='width:700;height:550;' src='../artists/" . htmlspecialchars($_POST["artistname"]) . "/" . htmlspecialchars($_POST["albumname"]) . "/editalbum'></iframe></div>";}
 	else{
 // if upload hasnt occured yet make iframe where the album will appear later
 	echo "<div style='position:absolute;left:420;top:20;'>your album will appear here after uploading a track.<br>
