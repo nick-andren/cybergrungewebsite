@@ -1,6 +1,8 @@
 # cybergrungewebsite
 
-Cybergrunge.net is a website allowing user uploads of music and art. This repo has just the most basic functions of the website. this is not the live website, it may differ but only slightly. config is up to you. for now this is just to provide a rough outline of how things work. 
+Cybergrunge.net is a website allowing user uploads of music and art. This repo has just the most basic functions of the website. 
+
+this is not the live website. for now this is just to provide a rough outline of how things work and the basic code being used. i test in prod because i don't actually know how to deploy stuff locally and docker and shit is too complicated cause im a dumbass
 
 ## Getting Started
 
@@ -14,18 +16,14 @@ Now you can visit the local version of the site by visiting http://localhost:133
 
 ## Contributions / Style Guide
 
-Most projects have contribution and style guide which pretends to be kind to contributors. This is fake and condescending. If you have rules, they exist for a reason, so state them forcefully and provide justification. Be open to changing rules, but don't remove your own agency or deny your own prejudice by hiding behind some abstract idea, appealing to some fallacious "conventions" which are just a psychological crutch to deny one's agency/responsibility. We don't need that kind of crap in FOSS or anywhere.
+Most projects have contribution and style guide which pretends to be kind to contributors. This is fake and condescending. If you have rules, they exist for a reason, so state them 
 
 * "readability" and "neatness" are subjective
 * assume anyone reading the code doesn't know how code works, otherwise you are ableist and fascist
-  * consequence of above: code should explain itself
-* brackets don't need their own line. ever.
-* keep indentations to minimum, four tabs is enough for anything
-  * if its not, then come up with a new solution because you're wrong
+* brackets don't need their own line that is gross
+* indentation is stupid
 * assume vanilla html/js/php etc
   * when libraries are used self-flagellate in comments
-* always minimize surface area and vectors for error - computers are stupid enough without humans
-* because of above, libraries/frameworks are the devil. JQuery is barely tolerable
 * promote communism in comments profusely (PCiCP)
 
 ## upload handling
@@ -34,11 +32,7 @@ the artists folder contains `custom upload.php` which handles uploads. the proce
 
 ## databases
 
-SQL database structure can be gleaned from the code but for posterity 
-
-for album styling you will need: SQL db named ```albums``` with following columns ``` backgroundcolor1 backgroundcolor2 bordercolor1 bordercolor2 borderstyle1 borderstyle2 color1 color2 album artist page owner ``` some arent implemented right now.
-
-for chat you will need a database named ```users``` with following columns ``` id	username	password	created_at	bgcolor	textcolor	status	email	LAST_ACTIVITY	projects ``` and again some of this stuff isnt implemented such as ```projects``` column.
+databases are undergoing a full rewrite atm
 
 ## router.php
 
