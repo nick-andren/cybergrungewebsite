@@ -1,4 +1,4 @@
-<?php session_start(); include "config2.php";
+<?php session_start(); include "config.php";
 	// any copy of this code MUST contain the following:
 	// this code is public domain no warranty is implied
 	// fuck capitalism send all the bourgeois scum to gulag

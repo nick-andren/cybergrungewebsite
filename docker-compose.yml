@@ -1,0 +1,47 @@
+version: "3.0"
+
+services:
+  website:
+    hostname: cybergrunge_website
+    build:
+      dockerfile: php.Dockerfile
+      context: ./dockerfiles
+    environment:
+      MYSQL_ROOT_PASSWORD: "masterplan"
+      MYSQL_USER: "cybergrunge_dev"
+      MYSQL_PASSWORD: "cybergrunge_dev"
+      MYSQL_DATABASE: "cybergrunge"
+    restart: always
+    volumes:
+      - "./website:/var/www/html"
+    ports:
+      - 32480:80
+      - 32443:443
+
+  mysql-server:
+    hostname: cybergrunge_database
+    image: mysql:latest
+    restart: always
+    ports:
+      - 32900:3306
+    environment:
+      TZ: "UTC"
+      MYSQL_ALLOW_EMPTY_PASSWORD: "no"
+      MYSQL_ROOT_PASSWORD: "masterplan"
+      MYSQL_USER: "cybergrunge_dev"
+      MYSQL_PASSWORD: "cybergrunge_dev"
+      MYSQL_DATABASE: "cybergrunge"
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+  phpmyadmin:
+    hostname: cybergrunge_phpmyadmin
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    links:
+      - mysql-server:db
+    ports:
+      - 9081:80
+
+volumes:
+  mysql-data:

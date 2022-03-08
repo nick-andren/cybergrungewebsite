@@ -1,5 +1,5 @@
 <? session_start();
-require_once "config2.php";
+require_once "config.php";
 
 mysqli_report();
 if($_SERVER["REQUEST_METHOD"] == "POST"){

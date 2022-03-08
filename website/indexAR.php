@@ -1,5 +1,5 @@
 <?php
-session_start(); include "config2.php"; 
+session_start(); include "config.php"; 
 ?> 
 <html>
 	<script src="mobilecheck.js"></script>
